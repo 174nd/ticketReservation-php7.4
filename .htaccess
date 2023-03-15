@@ -1,0 +1,51 @@
+RewriteEngine on
+ErrorDocument 404 /404.php
+
+RewriteRule ^$ logme-in.php [L]
+RewriteRule ^login/$ logme-in-admin.php [L]
+RewriteRule ^login-user/$ logme-in-user.php [L]
+RewriteRule ^logout/$ logme-out.php [L]
+RewriteRule ^register/$ register-me.php [L]
+RewriteRule ^error/$ error.php [L]
+RewriteRule ^panduan.pdf$ panduan-registrasi.pdf [L]
+#------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------
+RewriteRule ^admin/$ admin/main.php [L]
+
+#Perusahaan
+RewriteRule ^admin/perusahaan/$ admin/perusahaan/main.php [L]
+RewriteRule ^admin/perusahaan/([a-zA-Z0-9\-]+)$ admin/perusahaan/main.php?id_perusahaan=$1 [L]
+
+#Pelabuhan
+RewriteRule ^admin/pelabuhan/$ admin/pelabuhan/main.php [L]
+RewriteRule ^admin/pelabuhan/([a-zA-Z0-9\-]+)$ admin/pelabuhan/main.php?id_pelabuhan=$1 [L]
+
+#Kapal
+RewriteRule ^admin/kapal/$ admin/kapal/main.php [L]
+RewriteRule ^admin/kapal/([a-zA-Z0-9\-]+)$ admin/kapal/main.php?id_kapal=$1 [L]
+
+#Kapal
+RewriteRule ^admin/kapal/$ admin/kapal/main.php [L]
+RewriteRule ^admin/kapal/([a-zA-Z0-9\-]+)$ admin/kapal/main.php?id_kapal=$1 [L]
+
+#Kursi
+RewriteRule ^admin/kursi/$ admin/kursi/main.php [L]
+RewriteRule ^admin/kursi/([a-zA-Z0-9\-]+)$ admin/kursi/main.php?id_kursi=$1 [L]
+
+#User
+RewriteRule ^admin/user/$ admin/user/main.php [L]
+RewriteRule ^admin/user/([a-zA-Z0-9\-]+)$ admin/user/main.php?id_user=$1 [L]
+
+#Jadwal
+RewriteRule ^admin/jadwal/$ admin/jadwal/main.php [L]
+RewriteRule ^admin/jadwal/([a-zA-Z0-9\-]+)$ admin/jadwal/main.php?id_jadwal=$1 [L]
+#------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------
+RewriteRule ^pimpinan/$ pimpinan/main.php [L]
+#------------------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------------------
+RewriteRule ^user/$ user/main.php [L]
+RewriteRule ^user/export/surat-pinjaman/$ user/export/surat-pinjaman.php [L]
